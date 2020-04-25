@@ -1,7 +1,7 @@
 ---
 name: Pedido de nova funcionalidade
 about: Sugerir uma ideia para a plataforma
-title: "[Enhancement] YOUR IDEA!"
+title: "SUA GRANDE IDEIA!"
 labels: "Tipo: Funcionalidade"
 assignees: ''
 
