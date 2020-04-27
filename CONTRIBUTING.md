@@ -10,7 +10,7 @@ Para acessá-lo, clique [aqui](https://github.com/idvogados/code-of-conduct)
 
 ## Como contribuir
 
-Para contribuir com o projeto é necessário identificar issues que ainda estão abertas para aí sim abrir um PR. O passo a passo de como fazer um _fork_ o repositório e como abrir um PR seguem abaixo.
+Para contribuir com o projeto é necessário identificar issues que ainda estão abertas para aí sim abrir um PR. O passo a passo de como fazer um _fork_ do repositório e como abrir um PR seguem abaixo.
 
 1. ### Como forkar o Repositório
 
@@ -28,10 +28,10 @@ Para contribuir com o projeto é necessário identificar issues que ainda estão
 
    4- Na página de comparação(_Compare Changes_), selecionar **compare across forks**.
 
-   5- Em **base fork** selecione o repositório e a branch **_para a qual você deseja subir as alterações_**
+   5- Em **base fork** selecione o repositório e a branch **_dev_**
 
    6- Em **head fork** selecione o repositório e a branch **_nas quais você aplicou as alterações_**
 
-   7- Adicione uma descrição e um Título para o seu PR
+   7- Adicione um Título e preencha o modelo na descrição do Pull Request para submetê-lo corretamente
 
    8- Clique em **Create Pull Request**
