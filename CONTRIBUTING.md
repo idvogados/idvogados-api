@@ -22,7 +22,7 @@ O projeto hoje está dividido em 2 repositórios, o [**frontend**](https://githu
 
 2. ### **Como criar um PR**
 
-   1- Inicialmente é necessário fazer as alterações de código dentro do seu repositório forkado localmente, em uma nova branch.
+   1- Inicialmente é necessário fazer as alterações de código dentro do seu repositório localmente, em uma nova branch.
 
    2- Após ter comitado todas as alterações, subir sua branch para o repositório remoto forkado.
 
