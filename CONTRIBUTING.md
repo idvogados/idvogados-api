@@ -14,7 +14,7 @@ Para contribuir com o projeto é necessário identificar issues que ainda estão
 
 O projeto hoje está dividido em 2 repositórios, o [**frontend**](https://github.com/idvogados/frontend) e o [**backend**](https://github.com/idvogados/backend) os passos a passos abaixo são idênticos para os dois repositórios.
 
-1. ### **Como forkar o Repositório**
+1. ### Como forkar o Repositório
 
    1- Esteja no repositório que deseja contribuir no Github, e no canto superior direito há um botão **_Fork_**, clique nele.
 
