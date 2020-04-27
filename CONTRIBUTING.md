@@ -12,7 +12,7 @@ Para acessá-lo, clique [aqui](https://github.com/idvogados/code-of-conduct)
 
 Para contribuir com o projeto é necessário identificar issues que ainda estão abertas para aí sim abrir um PR. O passo a passo de como fazer um _fork_ o repositório e como abrir um PR seguem abaixo.
 
-1. ### **Como forkar o Repositório**
+1. ### Como forkar o Repositório
 
    1- Esteja no repositório que deseja contribuir no Github, e no canto superior direito há um botão **_Fork_**, clique nele.
 
