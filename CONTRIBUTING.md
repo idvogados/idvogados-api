@@ -28,7 +28,7 @@ O projeto hoje está dividido em 2 repositórios, o [**frontend**](https://githu
 
    3- Depois disso ir ao repositório original, Clicar em **New Pull Request**
 
-   4- Na página de comparação(Compare Changes), selecionar **compare across forks**.
+   4- Na página de comparação(_Compare Changes_), selecionar **compare across forks**.
 
    5- Em **base fork** selecione o repositório e a branch **_para a qual você deseja subir as alterações_**
 
