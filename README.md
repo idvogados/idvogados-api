@@ -1,6 +1,6 @@
 # 🚧 Trabalho em progresso.
 
-Repositório para o projeto de backend.
+Repositório para o projeto de back-end
 
 ## Como contribuir
 
