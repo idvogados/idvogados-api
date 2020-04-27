@@ -10,9 +10,7 @@ Para acessá-lo, clique [aqui](https://github.com/idvogados/code-of-conduct)
 
 ## Como contribuir
 
-Para contribuir com o projeto é necessário identificar issues que ainda estão abertas para aí sim abrir um PR. O passo a passo de como fazer um *fork* o repositório e como abrir um PR seguem abaixo.
-
-O projeto hoje está dividido em 2 repositórios, o [**frontend**](https://github.com/idvogados/frontend) e o [**backend**](https://github.com/idvogados/backend) os passos a passos abaixo são idênticos para os dois repositórios.
+Para contribuir com o projeto é necessário identificar issues que ainda estão abertas para aí sim abrir um PR. O passo a passo de como fazer um _fork_ o repositório e como abrir um PR seguem abaixo.
 
 1. ### **Como forkar o Repositório**
 
