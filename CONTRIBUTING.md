@@ -18,7 +18,7 @@ O projeto hoje está dividido em 2 repositórios, o [**frontend**](https://githu
 
    1- Esteja no repositório que deseja contribuir no Github, e no canto superior direito há um botão **_Fork_**, clique nele.
 
-   2- Assim que o processo de fork for finalizado você será redirecionado para o seu repositório que foi forkado a partir do idvogados.
+   2- Assim que o processo de fork for finalizado você será redirecionado para a sua cópia do repositório a partir do idvogados.
 
 2. ### **Como criar um PR**
 
