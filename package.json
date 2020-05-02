@@ -1,0 +1,28 @@
+{
+  "name": "idvogados_backend",
+  "version": "1.0.0",
+  "description": "Backend para o app Idvogados",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idvogados/backend.git"
+  },
+  "keywords": [
+    "idvogados",
+    "backend"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idvogados/backend/issues"
+  },
+  "homepage": "https://github.com/idvogados/backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase": "7.14.2"
+  }
+}

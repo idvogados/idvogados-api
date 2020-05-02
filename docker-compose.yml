@@ -1,0 +1,30 @@
+version: "3"
+services:
+  node-dev:
+    user: node_user
+    build: 
+      context: .
+      dockerfile: Node.Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock 
+      - ~/.ssh:/home/.ssh
+      - .:/usr/app
+    working_dir: /usr/app
+    command: bash -c "npm install && npm run dev"
+    environment: 
+      - FIRESTORE_HOST=firestore:8080
+      - FIRESTORE_PROJECT_ID=dummy-project-id
+    ports:
+      - "30101:30101"
+    depends_on:
+      - firestore
+
+  firestore:
+    build: 
+      context: .
+      dockerfile: Firestore.Dockerfile
+    container_name: firestore
+    ports: 
+      - "8080:8080"
+
+  
