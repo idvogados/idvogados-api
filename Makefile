@@ -1,4 +1,4 @@
-install:
+build:
 	docker-compose build
-dev:
+up:
 	docker-compose up -d
