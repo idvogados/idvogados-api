@@ -10,4 +10,4 @@ Linux e Mac: ```make install``` e ```make dev```
 
 Windows: ```docker-compose build``` e ```docker-compose up -d```
 
-O container node irá subir na porta 30101 (faça um teste abrindo o browser na url http://localhost:30101).
+O container node irá subir no [http://localhost:30101](http://localhost:30101) (faça um teste abrindo o browser na url).
