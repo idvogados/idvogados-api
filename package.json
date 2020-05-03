@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/idvogados/backend/issues"
   },
-  "homepage": "https://github.com/idvogados/backend#readme",
+  "homepage": "https://github.com/idvogados/backend",
   "dependencies": {
     "express": "^4.17.1",
     "firebase": "7.14.2"
