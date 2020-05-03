@@ -15,4 +15,8 @@ Linux e Mac: `make buid` e `make up`
 
 Windows: `docker-compose build` e `docker-compose up -d`
 
-O container node irá subir no [http://localhost:30101](http://localhost:30101) (faça um teste abrindo o browser na url).
+O container node irá subir no [http://localhost:30101][3] (faça um teste abrindo o browser na url).
+
+[1]:https://docs.docker.com/get-docker/
+[2]:https://docs.docker.com/compose/gettingstarted/
+[3]:http://localhost:30101
