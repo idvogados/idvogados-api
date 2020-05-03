@@ -10,9 +10,7 @@ services:
       - .:/usr/app
     working_dir: /usr/app
     command: bash -c "npm install && npm run dev"
-    environment: 
-      - FIRESTORE_HOST="${FIRESTORE_HOST}"
-      - FIRESTORE_PROJECT_ID="${FIRESTORE_PROJECT_ID}"
+   env_file: .env
     ports:
       - "30101:30101"
     depends_on:
