@@ -6,7 +6,7 @@ A maneira mais fácil de começar a desenvolver é utilizar o Docker como base p
 
 Tenha certeza que o docker está instalado na sua máquina (comando `docker -v`), juntamente com o docker compose (comando `docker-compose -v`) e utilize os seguintes comandos:
 
-Linux e Mac: ```make install``` e ```make dev```
+Linux e Mac: `make buid` e `make up`
 
 Windows: `docker-compose build` e `docker-compose up -d`
 
