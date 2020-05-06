@@ -2,7 +2,7 @@
 name: BUG
 about: Criar um reporte de bug para nos ajudar a melhorar nossa plataforma
 title: "[Bug] "
-labels: 'Tipo: Bug 🐛, Status: Não verificado'
+labels: 'Tipo: Bug :bug:, Status: Não verificado'
 assignees: ''
 
 ---
