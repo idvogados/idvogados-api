@@ -18,7 +18,7 @@ jobs:
             contains(github.event.issue.labels.*.name, 'Tipo: Bug 🐛')
           )
         with:
-          project: Quadro de preparo
+          project: Preparation Board
           column: Triage
           repo-token: ${{ secrets.GH_TOKEN }}
 
@@ -30,7 +30,7 @@ jobs:
             contains(github.event.issue.labels.*.name, 'Status: Em Progresso')
           )
         with:
-          project: Sprint Ativa
+          project: Current Sprint
           column: In progress
           repo-token: ${{ secrets.GH_TOKEN }}
 
@@ -42,7 +42,7 @@ jobs:
             contains(github.event.issue.labels.*.name, 'Status: Bloqueado')
           )
         with:
-          project: Sprint Ativa
+          project: Current Sprint
           column: Blocked
           repo-token: ${{ secrets.GH_TOKEN }}
 
@@ -55,6 +55,6 @@ jobs:
             github.event.action == 'reopened'
           )
         with:
-          project: Sprint Ativa
+          project: Current Sprint
           column: Code Review
           repo-token: ${{ secrets.GH_TOKEN }}
