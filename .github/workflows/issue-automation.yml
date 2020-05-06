@@ -1,0 +1,44 @@
+name: issue-automation
+
+on:
+  project_card:
+    types: [moved]
+
+jobs:
+  automate-issues-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: unlabel issues from 'To do'
+        uses: andymckay/labeler@1.0.2
+        if: |
+          github.event_name == 'project_card' &&
+          (
+            github.event.project_card.column_id == 'id da coluna'
+          )
+        with:
+          repo-token: ${{secrets.GH_TOKEN}}
+          remove-labels: "Status: Bloqueado, Status: Em Progresso"
+
+      - name: label issues from 'In progress'
+        uses: andymckay/labeler@1.0.2
+        if: |
+          github.event_name == 'project_card' &&
+          (
+            github.event.project_card.column_id == 'id da coluna'
+          )
+        with:
+          repo-token: ${{secrets.GH_TOKEN}}
+          add-labels: "Status: Em Progresso"
+          remove-labels: "Status: Bloqueado"
+
+      - name: label issues from 'Blocked'
+        uses: andymckay/labeler@1.0.2
+        if: |
+          github.event_name == 'project_card' &&
+          (
+            github.event.project_card.column_id == 'id da coluna'
+          )
+        with:
+          repo-token: ${{secrets.GH_TOKEN}}
+          add-labels: "Status: Bloqueado"
+          remove-labels: "Status: Em Progresso"
