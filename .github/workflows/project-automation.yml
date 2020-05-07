@@ -27,7 +27,7 @@ jobs:
           if: |
             github.event_name == 'issues' &&
             (
-              github.action == 'unlabeled' &&
+              github.event.action == 'unlabeled' &&
               !contains(github.event.issue.labels.*.name, 'Status: Em Progresso') &&
               !contains(github.event.issue.labels.*.name, 'Status: Bloqueado')
             )
