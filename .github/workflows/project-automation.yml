@@ -33,7 +33,7 @@ jobs:
           )
         with:
           project: Current Sprint
-          column: In progress
+          column: To do
           repo-token: ${{ secrets.GH_TOKEN }}
 
       - name: move issue labeled to 'In progress'
