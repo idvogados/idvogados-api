@@ -23,18 +23,18 @@ jobs:
           repo-token: ${{ secrets.GH_TOKEN }}
 
       - name: move issue unlabeled to 'To do'
-          uses: alex-page/github-project-automation-plus@v0.2.2
-          if: |
-            github.event_name == 'issues' &&
-            (
-              github.event.action == 'unlabeled' &&
-              !contains(github.event.issue.labels.*.name, 'Status: Em Progresso') &&
-              !contains(github.event.issue.labels.*.name, 'Status: Bloqueado')
-            )
-          with:
-            project: Current Sprint
-            column: In progress
-            repo-token: ${{ secrets.GH_TOKEN }}
+        uses: alex-page/github-project-automation-plus@v0.2.2
+        if: |
+          github.event_name == 'issues' &&
+          (
+            github.event.action == 'unlabeled' &&
+            !contains(github.event.issue.labels.*.name, 'Status: Em Progresso') &&
+            !contains(github.event.issue.labels.*.name, 'Status: Bloqueado')
+          )
+        with:
+          project: Current Sprint
+          column: In progress
+          repo-token: ${{ secrets.GH_TOKEN }}
 
       - name: move issue labeled to 'In progress'
         uses: alex-page/github-project-automation-plus@v0.2.2
