@@ -20,7 +20,7 @@ jobs:
         with:
           project: Preparation Board
           column: Triage
-          repo-token: ${{ secrets.GH_TOKEN }}
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
 
       - name: move issue unlabeled to 'To do'
         uses: alex-page/github-project-automation-plus@v0.2.2
@@ -34,7 +34,7 @@ jobs:
         with:
           project: Current Sprint
           column: To do
-          repo-token: ${{ secrets.GH_TOKEN }}
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
 
       - name: move issue labeled to 'In progress'
         uses: alex-page/github-project-automation-plus@v0.2.2
@@ -46,7 +46,7 @@ jobs:
         with:
           project: Current Sprint
           column: In progress
-          repo-token: ${{ secrets.GH_TOKEN }}
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
 
       - name: move issue labeled to 'Blocked'
         uses: alex-page/github-project-automation-plus@v0.2.2
@@ -58,7 +58,7 @@ jobs:
         with:
           project: Current Sprint
           column: Blocked
-          repo-token: ${{ secrets.GH_TOKEN }}
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
 
       - name: move 'new' PR to 'Code Review'
         uses: alex-page/github-project-automation-plus@v0.2.2
@@ -71,4 +71,4 @@ jobs:
         with:
           project: Current Sprint
           column: Code Review
-          repo-token: ${{ secrets.GH_TOKEN }}
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
