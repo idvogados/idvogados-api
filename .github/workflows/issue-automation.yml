@@ -16,7 +16,7 @@ jobs:
             github.event.project_card.column_id == 'id da coluna'
           )
         with:
-          repo-token: ${{secrets.GH_TOKEN}}
+          repo-token: ${{secrets.GH_ACCESS_TOKEN}}
           remove-labels: "Status: Bloqueado, Status: Em Progresso"
 
       - name: label issues from 'In progress'
@@ -27,7 +27,7 @@ jobs:
             github.event.project_card.column_id == 'id da coluna'
           )
         with:
-          repo-token: ${{secrets.GH_TOKEN}}
+          repo-token: ${{secrets.GH_ACCESS_TOKEN}}
           add-labels: "Status: Em Progresso"
           remove-labels: "Status: Bloqueado"
 
@@ -39,6 +39,6 @@ jobs:
             github.event.project_card.column_id == 'id da coluna'
           )
         with:
-          repo-token: ${{secrets.GH_TOKEN}}
+          repo-token: ${{secrets.GH_ACCESS_TOKEN}}
           add-labels: "Status: Bloqueado"
           remove-labels: "Status: Em Progresso"
