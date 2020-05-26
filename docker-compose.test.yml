@@ -1,0 +1,10 @@
+version: '3.6'
+
+services:
+  idvogados_firebase:
+    container_name: idvogados_firebase
+    build:
+      context: ./
+      dockerfile: ./.docker/firebase.Dockerfile
+    ports:
+      - 5555:5555
