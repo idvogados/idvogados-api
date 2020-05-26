@@ -1,0 +1,39 @@
+{
+  "env": {
+    "commonjs": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:security/recommended",
+    "plugin:you-dont-need-lodash-underscore/compatible",
+    "prettier"
+  ],
+  "plugins": ["prettier", "security", "no-unsafe-regex"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-unsafe-regex/no-unsafe-regex": "error",
+    "func-names": ["warn", "always", { "generators": "never" }],
+    "no-underscore-dangle": "off",
+    "camelcase": [
+      "error",
+      {
+        "properties": "never",
+        "ignoreDestructuring": true
+      }
+    ],
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
+    ],
+    "no-continue": "off",
+    "no-await-in-loop": "off"
+  }
+}

@@ -35,3 +35,7 @@ Para contribuir com o projeto é necessário identificar issues que ainda estão
    7- Adicione um Título e preencha o modelo na descrição do Pull Request para submetê-lo corretamente
 
    8- Clique em **Create Pull Request**
+
+## Orientações
+
+Para mais informações sobre a estrutura do código de backend, clique [aqui](https://github.com/idvogados/backend/blob/dev/docs/orientacoes.md)
