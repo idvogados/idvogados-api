@@ -1,0 +1,57 @@
+{
+  "name": "idvodagos-backend",
+  "version": "0.1.0",
+  "description": "Projeto Idvogados",
+  "main": "app.js",
+  "dependencies": {
+    "@b2wads/env-o-loader": "^1.0.2",
+    "express": "^4.17.0",
+    "express-async-wrap": "^1.0.0",
+    "firebase": "^7.14.5",
+    "http-status": "^1.4.2",
+    "pino": "^6.2.1"
+  },
+  "devDependencies": {
+    "acorn": "^7.1.1",
+    "chai": "^4.2.0",
+    "sinon": "^9.0.2",
+    "mocha": "^7.1.2",
+    "eslint": "6.2.2",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "6.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-no-unsafe-regex": "1.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "6.6.0",
+    "nyc": "^14.1.1",
+    "prettier": "1.17.1",
+    "supertest": "4.0.2"
+  },
+  "scripts": {
+    "deps": "docker-compose -f docker-compose.test.yml up --force-recreate --renew-anon-volumes --remove-orphans",
+    "eslint": "./node_modules/.bin/eslint --fix .",
+    "eslint:check": "./node_modules/.bin/eslint .",
+    "style:fix": "npm run prettier && npm run eslint",
+    "style:check": "npm run prettier:check && npm run eslint:check",
+    "prettier": "./node_modules/.bin/prettier --write \"**/{*.js,*.json,bin/**}\"",
+    "prettier:check": "./node_modules/.bin/prettier --check \"**/{*.js,*.json,bin/**}\"",
+    "start": "node ./bin/www",
+    "start:docker": "docker-compose up --force-recreate --renew-anon-volumes --remove-orphans",
+    "debug": "node --inspect-brk ./bin/www",
+    "cli": "node --experimental-repl-await",
+    "test": "./node_modules/.bin/nyc mocha --reporter spec",
+    "test:acceptance": "npm t test/acceptance/*",
+    "test:unit": "npm t test/unit/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:idvogados/backend"
+  },
+  "keywords": [
+    "nodejs"
+  ]
+}

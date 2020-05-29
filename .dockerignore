@@ -1,0 +1,14 @@
+# Arquivos git
+.git/
+.github/
+.gitignore
+
+# Arquivos Docker
+*.Dockerfile
+docker-compose.yml
+
+# Arquivos do projeto
+node_modules/
+.nyc_output/
+README.md
+CONTRIBUTING.md

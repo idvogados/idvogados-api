@@ -1,0 +1,23 @@
+version: '3.6'
+
+services:
+  idvogados_api:
+    container_name: idvogados_api
+    build:
+      context: ./
+      dockerfile: ./.docker/node-dev.Dockerfile
+    environment:
+      NODE_ENV: development
+      API_PORT: 3001
+    ports:
+      - 3001:3001
+    depends_on:
+      - idvogados_firebase
+
+  idvogados_firebase:
+    container_name: idvogados_firebase
+    build:
+      context: ./
+      dockerfile: ./.docker/firebase.Dockerfile
+    ports:
+      - 5555:5555
