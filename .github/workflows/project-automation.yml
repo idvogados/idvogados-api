@@ -1,0 +1,74 @@
+name: project-automation
+
+on:
+  issues:
+    types: [opened, labeled, unlabeled]
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  automate-project-columns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: move issue labeled BUG to 'triage'
+        uses: alex-page/github-project-automation-plus@v0.2.2
+        if: |
+          github.event_name == 'issues' &&
+          (
+            contains(github.event.issue.labels.*.name, 'Tipo: Bug :bug:')
+          )
+        with:
+          project: Preparation Board
+          column: Triage
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      - name: move issue unlabeled to 'To do'
+        uses: alex-page/github-project-automation-plus@v0.2.2
+        if: |
+          github.event_name == 'issues' &&
+          (
+            github.event.action == 'unlabeled' &&
+            !contains(github.event.issue.labels.*.name, 'Status: Em Progresso') &&
+            !contains(github.event.issue.labels.*.name, 'Status: Bloqueado')
+          )
+        with:
+          project: Current Sprint
+          column: To do
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      - name: move issue labeled to 'In progress'
+        uses: alex-page/github-project-automation-plus@v0.2.2
+        if: |
+          github.event_name == 'issues' &&
+          (
+            contains(github.event.issue.labels.*.name, 'Status: Em Progresso')
+          )
+        with:
+          project: Current Sprint
+          column: In progress
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      - name: move issue labeled to 'Blocked'
+        uses: alex-page/github-project-automation-plus@v0.2.2
+        if: |
+          github.event_name == 'issues' &&
+          (
+            contains(github.event.issue.labels.*.name, 'Status: Bloqueado')
+          )
+        with:
+          project: Current Sprint
+          column: Blocked
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      - name: move 'new' PR to 'Code Review'
+        uses: alex-page/github-project-automation-plus@v0.2.2
+        if: |
+          github.event_name == 'pull_request' &&
+          (
+            github.event.action == 'opened' ||
+            github.event.action == 'reopened'
+          )
+        with:
+          project: Current Sprint
+          column: Code Review
+          repo-token: ${{ secrets.GH_ACCESS_TOKEN }}
