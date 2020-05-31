@@ -1,5 +1,6 @@
 const sendgrid = require('@sendgrid/mail')
 const sendgridConfig = require('../config/sendgrid-config')
+const logger = require('./logger-client')
 
 module.exports = {
   /**
@@ -19,6 +20,11 @@ module.exports = {
       subject,
       html: content
     }
+    logger.debug({
+      action: 'sendgrid-client.sendMail',
+      message: 'Sending mail',
+      opts
+    })
     return sendgrid.send(opts)
   }
 }
