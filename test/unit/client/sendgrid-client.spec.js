@@ -11,7 +11,7 @@ describe('[Unit] clients/sendgrid-client', () => {
     const spyLoggerDebug = sinon.spy()
 
     const fixture = {
-      to: 'john@doe.io',
+      to: ['john@doe.io'],
       subject: 'A nice test email',
       content: '<h1> Hello </h1>'
     }

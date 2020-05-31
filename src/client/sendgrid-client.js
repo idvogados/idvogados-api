@@ -8,7 +8,7 @@ module.exports = {
    * https://github.com/sendgrid/sendgrid-nodejs
    *
    * @param {Object} opts Atributos para envio de e-mails
-   * @param {string} opts.to E-mail de destino
+   * @param {Array} opts.to Lista de e-mails de destino
    * @param {string} opts.subject Título do e-mail
    * @param {string} opts.content Conteúdo do e-mail representado em formato `text/html`
    */
