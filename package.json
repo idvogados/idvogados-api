@@ -46,6 +46,7 @@
     "test": "./node_modules/.bin/nyc mocha --reporter spec",
     "test:acceptance": "npm t test/acceptance/*",
     "test:unit": "npm t test/unit/*"
+    "coverage": "nyc --reporter=json --reporter=text mocha --reporter spec"
   },
   "repository": {
     "type": "git",
