@@ -28,10 +28,6 @@ jobs:
       - name: Make coverage
         run: npm run coverage
 
-      - run: ls
-
-      - run: ls coverage/
-
       - uses: codecov/codecov-action@v1
         with:
           file: coverage/coverage-final.json
