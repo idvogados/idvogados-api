@@ -1,5 +1,8 @@
 version: '3.6'
 
+volumes:
+    node_modules_volume: {}
+
 services:
   idvogados_api:
     container_name: idvogados_api
@@ -11,6 +14,9 @@ services:
       API_PORT: 3001
     ports:
       - 3001:3001
+    volumes:
+      - .:/var/app
+      - node_modules_volume:/var/app/node_modules/
     depends_on:
       - idvogados_firebase
 

@@ -33,19 +33,20 @@
   },
   "scripts": {
     "deps": "docker-compose -f docker-compose.test.yml up --force-recreate --renew-anon-volumes --remove-orphans",
-    "eslint": "./node_modules/.bin/eslint --fix .",
-    "eslint:check": "./node_modules/.bin/eslint .",
+    "eslint": "eslint --fix .",
+    "eslint:check": "eslint .",
     "style:fix": "npm run prettier && npm run eslint",
     "style:check": "npm run prettier:check && npm run eslint:check",
-    "prettier": "./node_modules/.bin/prettier --write \"**/{*.js,*.json,bin/**}\"",
-    "prettier:check": "./node_modules/.bin/prettier --check \"**/{*.js,*.json,bin/**}\"",
+    "prettier": "prettier --write \"**/{*.js,*.json,bin/**}\"",
+    "prettier:check": "prettier --check \"**/{*.js,*.json,bin/**}\"",
     "start": "node ./bin/www",
     "start:docker": "docker-compose up --force-recreate --renew-anon-volumes --remove-orphans",
     "debug": "node --inspect-brk ./bin/www",
     "cli": "node --experimental-repl-await",
-    "test": "./node_modules/.bin/nyc mocha --reporter spec",
+    "test": "nyc mocha --reporter spec",
     "test:acceptance": "npm t test/acceptance/*",
-    "test:unit": "npm t test/unit/*"
+    "test:unit": "npm t test/unit/*",
+    "coverage": "nyc --reporter=json mocha --reporter spec"
   },
   "repository": {
     "type": "git",
