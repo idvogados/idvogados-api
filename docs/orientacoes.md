@@ -123,7 +123,16 @@ O projeto conta com vários scripts que irão auxiliar no desenvolvimento e pode
 ### Comandos Make
 
 - `make build`: Faz build das imagens docker
-- `make up`: Inicializa a api localmente com docker, utilizando as configurações do arquivo [`docker-compose.yml`](https://github.com/idvogados/backend/blob/dev/docker-compose.yml)
+- `make up`: Inicializa todos os serviços (é possível passar arugmentos extras utilizando `make up args='arg extra'`)
+- `make up.detach`: Inicializa todos os serviços no modo detached e com outros parâmetros (é possível passar arugmentos extras utilizando `make up.detach args='arg extra'`)
+- `make up.firebase`: Inicializa apenas o serviço do Firebase
+- `make down`: Mata todos os serviços  (é possível passar arugmentos extras utilizando `make down args='arg extra'`)
+- `make down.volumes`: Mata todos os serviços e remove os volumes nomeados 
+- `make bash`: Inicia um bash/shell script no container do serviço Node
+- `make cli`: Acessa a API em modo terminal na pasta raiz do projeto
+- `make tests`: Executa todos os testes (Pasta `test/*`)
+- `make coverage`: Executa os testes e gera o arquivo de coverage
+- `make style.check`: Verifica se o código fonte segue os padrões de estilo definidos nos arquivos `.eslintrc` e `.prettierrc`
 
 ## Configurações do projeto
 
