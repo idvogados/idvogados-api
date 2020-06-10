@@ -4,7 +4,7 @@ const logger = require('../../../src/client/logger-client')
 const sendgridConfig = require('../../../src/config/sendgrid-config')
 const sendgridClient = require('../../../src/client/sendgrid-client')
 
-describe('[Unit] clients/sendgrid-client', () => {
+describe('[Unit] client/sendgrid-client', () => {
   describe('.sendMail', () => {
     const stubSend = sinon.stub()
     const spySetApiKey = sinon.spy()
@@ -36,7 +36,7 @@ describe('[Unit] clients/sendgrid-client', () => {
       const calledCorrectly = spyLoggerDebug.calledWith({
         action: 'sendgrid-client.sendMail',
         message: 'Sending mail',
-        opts: {
+        meta: {
           to: fixture.to,
           from: sendgridConfig.fromEmail,
           subject: fixture.subject,
