@@ -7,8 +7,8 @@ module.exports = {
    */
   async status() {
     logger.debug({
-      action: 'healthService.status',
-      msg: 'Checking API health'
+      action: 'health-service.status',
+      message: 'Checking API health'
     })
     return Promise.resolve({ status: 'ok' })
   }
