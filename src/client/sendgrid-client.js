@@ -23,7 +23,7 @@ module.exports = {
     logger.debug({
       action: 'sendgrid-client.sendMail',
       message: 'Sending mail',
-      opts
+      meta: opts
     })
     return sendgrid.send(opts)
   }
