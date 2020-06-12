@@ -12,7 +12,7 @@ Descrevas as mudanças feitas no código neste espaço.
 Se for mais de uma issue, liste seguindo o padrão. Copie e cole a estrutura do fixes, pois assim a Issue é fecheada quando o ocorrer o Merge do PR.
 -->
 
-- fixes issue #
+- fixes #
 **Tenha certeza de que existe uma issue aberta neste repositório para esta funcionalidade antes de enviar o PR**
 
 ### Mudanças na API ###
