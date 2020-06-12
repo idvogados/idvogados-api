@@ -13,6 +13,7 @@ Se for mais de uma issue, liste seguindo o padrão. Copie e cole a estrutura do 
 -->
 
 - fixes #
+
 **Tenha certeza de que existe uma issue aberta neste repositório para esta funcionalidade antes de enviar o PR**
 
 ### Mudanças na API ###
