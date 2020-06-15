@@ -87,3 +87,8 @@ As seguintes variáveis de ambiente são utilizadas para configurar a conexão c
 - `FIREBASE_API_KEY`: Api Key para conexão com o Firebase Cloud, encontrada no painel de configuração do Firebase.
 - `FIREBASE_PROJECT_ID`: ID do projeto no Firebase Cloud, encontrada no painel de configuração do Firebase.
 - `FIREBASE_FIRESTORE_HOST`: Host do Firestore para conexão local. Padrão: `localhost:5555`
+
+### Configurações do SendGrid
+
+- `SENDGRID_API_KEY`: Api Key para conexão com o [SendGrid](sendgrid.com)
+- `SENDGRID_FROM_EMAIL`: Email de origem padrão. Padrão: `contato@idvogados.org`

@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "@b2wads/env-o-loader": "^1.0.2",
+    "@sendgrid/mail": "^7.1.1",
     "express": "^4.17.0",
     "express-async-wrap": "^1.0.0",
     "firebase": "^7.14.5",

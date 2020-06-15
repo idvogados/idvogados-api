@@ -6,7 +6,7 @@ const apiConfig = require('../../../src/config/api-config')
 const firebaseConfig = require('../../../src/config/firebase-config')
 const firebaseClient = require('../../../src/client/firebase-client')
 
-describe('[Unit] clients/firebase-client', () => {
+describe('[Unit] client/firebase-client', () => {
   describe('._createConnection', () => {
     let connection
     const stubFirestoreSettings = sinon.stub()
