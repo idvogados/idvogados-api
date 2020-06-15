@@ -5,5 +5,5 @@ const apiConfig = require('../src/config/api-config')
 const logger = require('../src/client/logger-client')
 
 app.listen(apiConfig.port, () => {
-  logger.info({ msg: `Listening on port ${apiConfig.port}` })
+  logger.info({ action: 'www', message: `Listening on port ${apiConfig.port}` })
 })
