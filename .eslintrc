@@ -1,39 +1,45 @@
 {
   "env": {
-    "commonjs": true,
-    "node": true
+    "es6": true,
+    "node": true,
+    "jest": true
   },
   "extends": [
-    "airbnb",
-    "plugin:security/recommended",
-    "plugin:you-dont-need-lodash-underscore/compatible",
-    "prettier"
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
-  "plugins": ["prettier", "security", "no-unsafe-regex"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "prettier/prettier": ["error"],
-    "no-unsafe-regex/no-unsafe-regex": "error",
-    "func-names": ["warn", "always", { "generators": "never" }],
-    "no-underscore-dangle": "off",
-    "camelcase": [
+    "semi": "off",
+    "camelcase": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-unused-vars": [
       "error",
-      {
-        "properties": "never",
-        "ignoreDestructuring": true
-      }
+      { "argsIgnorePattern": "_" }
     ],
-    "no-restricted-syntax": [
+    "@typescript-eslint/interface-name-prefix": [
       "error",
-      {
-        "selector": "LabeledStatement",
-        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
-      },
-      {
-        "selector": "WithStatement",
-        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
-      }
+      { "prefixWithI": "always" }
     ],
-    "no-continue": "off",
-    "no-await-in-loop": "off"
+    "prettier/prettier": "error",
+    "import/extensions": ["error", "ignorePackages", { "ts": "never" }],
+    "no-useless-constructor": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }

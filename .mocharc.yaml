@@ -1,6 +1,0 @@
-require:
-  - chai/register-expect
-  - test/setup.js
-recursive: true
-timeout: 6000
-exit: true
