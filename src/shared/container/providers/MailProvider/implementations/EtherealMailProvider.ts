@@ -1,6 +1,6 @@
-/* eslint-disable no-console */
 import { inject, injectable } from 'tsyringe'
 import nodemailer, { Transporter } from 'nodemailer'
+import logger from '@shared/utils/logger'
 import IMailProvider from '../models/IMailProvider'
 import ISendMailDTO from '../dtos/ISendMailDTO'
 import IMailTemplateProvider from '../../MailTemplateProvider/models/IMailTemplateProvider'
@@ -43,8 +43,15 @@ export default class EtherealMailProvider implements IMailProvider {
       subject,
       html: await this.mailTemplateProvider.parse(templateData)
     })
-
-    console.log('Message sent: %s', message.messageId)
-    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(message))
+    logger.debug({
+      action:
+        '@shared/container/providers/MailProvider/implementations/CustomMailProvider.ts',
+      message: `Message sent: ${message.messageId}`
+    })
+    logger.debug({
+      action:
+        '@shared/container/providers/MailProvider/implementations/CustomMailProvider.ts',
+      message: `Preview URL: ${nodemailer.getTestMessageUrl(message)}`
+    })
   }
 }

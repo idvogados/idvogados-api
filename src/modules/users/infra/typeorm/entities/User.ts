@@ -6,7 +6,7 @@ import {
   UpdateDateColumn
 } from 'typeorm'
 import uploadConfig from '@config/upload'
-import { APP_API_URL } from '@shared/utils/environment'
+import { IDV_APP_API_URL } from '@shared/utils/environment'
 
 import { Expose, Exclude } from 'class-transformer'
 
@@ -44,7 +44,7 @@ class User {
     }
     switch (uploadConfig.driver) {
       case 'disk':
-        return `${APP_API_URL}/files/${this.avatar}`
+        return `${IDV_APP_API_URL}/files/${this.avatar}`
       default:
         return null
     }

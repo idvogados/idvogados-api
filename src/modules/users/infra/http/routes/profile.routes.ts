@@ -10,9 +10,9 @@ const profileRouter = Router()
 
 profileRouter.use(ensureAuthenticated)
 
-profileRouter.get('/', profileController.show)
+profileRouter.get('/profile', profileController.show)
 profileRouter.put(
-  '/',
+  '/profile',
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),

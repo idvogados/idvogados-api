@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  idvogados_db:
+    image: postgres
+    container_name: idvogados
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: idvogados
+    ports:
+      - 5432:5432
+  idvogados_redis:
+    image: redis:alpine
+    container_name: idvogados_redis
+    ports:
+      - 6379:6379

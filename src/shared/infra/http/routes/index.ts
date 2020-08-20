@@ -6,9 +6,9 @@ import profileRouter from '@modules/users/infra/http/routes/profile.routes'
 
 const routes = Router()
 
-routes.use('/users', usersRouter)
-routes.use('/sessions', sessionsRouter)
-routes.use('/password', passwordRouter)
-routes.use('/profile', profileRouter)
+routes.use(usersRouter)
+routes.use(sessionsRouter)
+routes.use(passwordRouter)
+routes.use(profileRouter)
 
 export default routes

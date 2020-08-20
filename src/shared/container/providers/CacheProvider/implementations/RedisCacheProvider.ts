@@ -2,7 +2,7 @@ import Redis, { Redis as IRedis } from 'ioredis'
 import cacheConfig from '@config/cache'
 import ICacheProvider from '../models/ICacheProvider'
 
-export default class RedisCachePRovider implements ICacheProvider {
+export default class RedisCacheProvider implements ICacheProvider {
   private client: IRedis
 
   constructor() {
@@ -27,13 +27,11 @@ export default class RedisCachePRovider implements ICacheProvider {
   }
 
   public async invalidatePrefix(prefix: string): Promise<void> {
-    const keys = this.client.keys(`${prefix}:*`)
+    const keys = await this.client.keys(`${prefix}:*`)
 
     const pipeline = this.client.pipeline()
 
-    ;(await keys).forEach(key => {
-      pipeline.del(key)
-    })
+    keys.forEach(key => pipeline.del(key))
 
     await pipeline.exec()
   }

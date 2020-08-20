@@ -3,7 +3,7 @@ import AppError from '@shared/errors/AppError'
 import { injectable, inject } from 'tsyringe'
 import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider'
 import path from 'path'
-import { APP_WEB_URL } from '@shared/utils/environment'
+import { IDV_APP_WEB_URL } from '@shared/utils/environment'
 import IUsersRepository from '../repositories/IUsersRepository'
 import IUserTokensRepository from '../repositories/IUserTokensRepository'
 
@@ -47,7 +47,7 @@ class SendForgotPasswordEmailService {
         file: forgotPasswordTemplate,
         variables: {
           name: user.name,
-          link: `${APP_WEB_URL}/reset_password?token=${token}`
+          link: `${IDV_APP_WEB_URL}/reset_password?token=${token}`
         }
       }
     })

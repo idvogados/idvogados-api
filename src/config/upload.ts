@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 import multer, { StorageEngine } from 'multer'
 import path from 'path'
-import { STORAGE_DRIVER } from '@shared/utils/environment'
+import { IDV_STORAGE_DRIVER } from '@shared/utils/environment'
 
 const tempFolder = path.resolve(__dirname, '..', '..', 'temp')
 
@@ -18,7 +18,7 @@ interface IUploadConfig {
 }
 
 export default {
-  driver: STORAGE_DRIVER,
+  driver: IDV_STORAGE_DRIVER,
 
   tempFolder,
   uploadsFolder: path.resolve(tempFolder, 'uploads'),
