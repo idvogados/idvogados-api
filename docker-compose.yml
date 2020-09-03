@@ -1,29 +1,17 @@
-version: '3.6'
-
-volumes:
-    node_modules_volume: {}
+version: '3.1'
 
 services:
-  idvogados_api:
-    container_name: idvogados_api
-    build:
-      context: ./
-      dockerfile: ./.docker/node-dev.Dockerfile
+  idvogados_db:
+    image: postgres
+    container_name: idvogados
     environment:
-      NODE_ENV: development
-      API_PORT: 3001
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: idvogados
     ports:
-      - 3001:3001
-    volumes:
-      - .:/var/app
-      - node_modules_volume:/var/app/node_modules/
-    depends_on:
-      - idvogados_firebase
-
-  idvogados_firebase:
-    container_name: idvogados_firebase
-    build:
-      context: ./
-      dockerfile: ./.docker/firebase.Dockerfile
+      - 5432:5432
+  idvogados_redis:
+    image: redis:alpine
+    container_name: idvogados_redis
     ports:
-      - 5555:5555
+      - 6379:6379
