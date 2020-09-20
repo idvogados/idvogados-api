@@ -3,11 +3,13 @@ import { celebrate, Joi, Segments } from 'celebrate'
 
 import ForgotPasswordController from '../controllers/ForgotPasswordController'
 import ResetPasswordController from '../controllers/ResetPasswordController'
+import ValidateTokenController from '../controllers/ValidateTokenController'
 
 const passwordRouter = Router()
 
 const passwordController = new ForgotPasswordController()
 const resetController = new ResetPasswordController()
+const validateTokenController = new ValidateTokenController()
 
 passwordRouter.post(
   '/password/forgot',
@@ -26,6 +28,15 @@ passwordRouter.post(
     }
   }),
   resetController.create
+)
+passwordRouter.get(
+  '/password/token/:token',
+  celebrate({
+    [Segments.QUERY]: {
+      token: Joi.string().required()
+    }
+  }),
+  validateTokenController.create
 )
 
 export default passwordRouter

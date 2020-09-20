@@ -22,6 +22,10 @@ class UserTokensRepository implements IUserTokensRepository {
 
     return userToken
   }
+
+  public async delete(id: string): Promise<void> {
+    await this.ormRepository.delete(id)
+  }
 }
 
 export default UserTokensRepository
